@@ -1,3 +1,34 @@
+Томенде корсетилген барлык API ларга HTTP запрос кылган кезде Header болиминде Bearer токен косылып кетуи керек 
+Мысалы 
+- *bas betler:*
+  ```json
+  Authorization: Bearer your_access_token
+  ```
+- *Soraw denesi:*
+  ```json
+  {
+      "title": "Python Basics",
+      "description": "Learn the fundamentals of Python programming.",
+      "start_date": "2023-10-01",
+      "end_date": "2023-12-31",
+      "instructor": 1
+  }
+  ```
+- *Kútilgen juwap:*
+  ```json
+  {
+      "id": 1,
+      "title": "Python Basics",
+      "description": "Learn the fundamentals of Python programming.",
+      "start_date": "2023-10-01",
+      "end_date": "2023-12-31",
+      "instructor": 1,
+      "created_at": "2023-09-25T12:34:56Z"
+  } 
+  ```
+БАРЛЫК ЗАПРОСЛАР ОЗИНДЕ ТОКЕН МЕН КОСЫЛЫП КЕТУИ КЕРЕК
+
+
 ### 1. *Admin panel*
 - *marshrut:* `/admin/`,
 - login: admin
