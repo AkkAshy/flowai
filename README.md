@@ -1,20 +1,22 @@
-### 1. **Админка**
-- **marshrut:** `/admin/`
+### 1. *Admin panel*
+- *marshrut:* `/admin/`,
+- login: admin
+- password: baton2904
 
 
-### 2. **Аутентификация (JWT)**
+### 2. *Autentifikaciya (JWT)*
 
-#### a) **Получение JWT-токена**
-- **usıl:** `POST`
-- **marshrut:** `/api/token/`
-- **Soraw denesi:**
+#### a) JWT- token aliw
+- *usıl:* `POST`
+- *marshrut:* `/api/token/`
+- *Soraw denesi:*
   ```json
   {
       "username": "test_user",
       "password": "secure_password"
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzOTI2NzAyLCJpYXQiOjE3NDM5MjQwODksImp0aSI6IjdiOWUxOGQ5ODRlODQ1NGM4ZTVmMTdhZWQ3MmMxYmQ4IiwidXNlcl9pZCI6NH0.woS8BWYoSUFTzJ9Btnad0wYwo2AxhUuqkpTxnFXhlCo",
@@ -22,10 +24,10 @@
   }
   ```
 
-#### b) **Обновление JWT-токена**
-- **usıl:** `POST`
-- **marshrut:** `/api/token/refresh/`
-- **Soraw denesi:**
+#### b) *JWT-token janartiw*
+- *usıl:* `POST`
+- *marshrut:* `/api/token/refresh/`
+- *Soraw denesi:*
   ```json
   {
       "refresh": "your_refresh_token"
@@ -40,12 +42,12 @@
 
 ---
 
-### 3. **Пользователи**
+### 3. **User**
 
-#### a) **Регистрация пользователя**
-- **usıl:** `POST`
-- **marshrut:** `/api/users/register/`
-- **Soraw denesi:**
+#### a) *Regestraciya*
+- *usıl:* `POST`
+- *marshrut:* `/api/users/register/`
+- *Soraw denesi:*
   ```json
   {
   "username": "archmage2",
@@ -56,24 +58,24 @@
   "role": "teacher"
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "message": "User registered successfully."
   }
   ```
 
-#### b) **Авторизация пользователя**
-- **usıl:** `POST`
-- **marshrut:** `/api/users/login/`
-- **Soraw denesi:**
+#### b) *Avtorizaciya*
+- *usıl:* `POST`
+- *marshrut:* `/api/users/login/`
+- *Soraw denesi:*
   ```json
   {
       "username": "new_user",
       "password": "secure_password"
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "access": "your_access_token",
@@ -81,14 +83,14 @@
   }
   ```
 
-#### c) **Просмотр профиля**
-- **usıl:** `GET`
-- **marshrut:** `/api/users/profile/`
-- **bas betler:**
+#### c) *Profildi koriw*
+- *usıl:* `GET`
+- *marshrut:* `/api/users/profile/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "id": 1,
@@ -98,12 +100,12 @@
   }
   ```
 
-### 4. **Курсы**
+### 4. *Kirislar*
 
-#### a) **Список курсов**
-- **usıl:** `GET`
-- **marshrut:** `/api/courses/`
-- **Kútilgen juwap:**
+#### a) *Kurslar spisogi*
+- *usıl:* `GET`
+- *marshrut:* `/api/courses/`
+- *Kútilgen juwap:*
   ```json
   [
       {
@@ -115,14 +117,14 @@
   ]
   ```
 
-#### b) **Создание курса**
-- **usıl:** `POST`
-- **marshrut:** `/api/courses/`
-- **bas betler:**
+#### b) *Kwris jaratiw*
+- *usıl:* `POST`
+- *marshrut:* `/api/courses/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
-- **Soraw denesi:**
+- *Soraw denesi:*
   ```json
   {
       "title": "Python Basics",
@@ -132,7 +134,7 @@
       "instructor": 1
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "id": 1,
@@ -145,10 +147,10 @@
   } 
   ```
 
-#### c) **Детальный просмотр курса**
-- **usıl:** `GET`
-- **marshrut:** `/api/courses/<id>/`
-- **Kútilgen juwap:**
+#### c) *Aniq bir wristi koriw*
+- *usıl:* `GET`
+- *marshrut:* `/api/courses/<id>/`
+- *Kútilgen juwap:*
   ```json
   {
       "id": 1,
@@ -160,12 +162,12 @@
 
 ---
 
-### 5. **Уроки**
+### 5. *Sabaqtar*
 
-#### a) **Список уроков**
-- **usıl:** `GET`
-- **marshrut:** `/api/lessons/`
-- **Kútilgen juwap:**
+#### a) *Sabaqtar spisogi*
+- *usıl:* `GET`
+- *marshrut:* `/api/lessons/`
+- *Kútilgen juwap:*
   ```json
   [
       {
@@ -178,14 +180,14 @@
   ]
   ```
 
-#### b) **Создание урока**
-- **usıl:** `POST`
-- **marshrut:** `/api/lessons/`
-- **bas betler:**
+#### b) **Sabaq jaratiw**
+- *usıl:* `POST`
+- *marshrut:* `/api/lessons/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
-- **Soraw denesi:**
+- *Soraw denesi:*
   ```json
   {
       "course": 1,
@@ -194,7 +196,7 @@
       "order": 2
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "id": 2,
@@ -205,10 +207,10 @@
   }
   ```
 
-#### c) **Детальный просмотр урока**
-- **usıl:** `GET`
-- **marshrut:** `/api/lessons/<id>/`
-- **Kútilgen juwap:**
+#### c) *Aniq BIR sabaqti koriw*
+- *usıl:* `GET`
+- *marshrut:* `/api/lessons/<id>/`
+- *Kútilgen juwap:*
   ```json
   {
       "id": 1,
@@ -221,12 +223,12 @@
 
 ---
 
-### 6. **Тесты**
+### 6. *Тесты*
 
-#### a) **Список тестов**
-- **usıl:** `GET`
-- **marshrut:** `/api/lessons/tests/`
-- **Kútilgen juwap:**
+#### a) *Testter  spisogi*
+- *usıl:* `GET`
+- *marshrut:* `/api/lessons/tests/`
+- *Kútilgen juwap:*
   ```json
   [
       {
@@ -239,14 +241,14 @@
   ]
   ```
 
-#### b) **Создание теста**
-- **usıl:** `POST`
-- **marshrut:** `/api/lessons/tests/`
-- **bas betler:**
+#### b) *Test jaratiw*
+- *usıl:* `POST`
+- *marshrut:* `/api/lessons/tests/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
-- **Soraw denesi:**
+- *Soraw denesi:*
   ```json
   {
       "lesson": 1,
@@ -255,7 +257,7 @@
       "is_published": true
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "id": 2,
@@ -268,12 +270,12 @@
 
 ---
 
-### 7. **Вопросы**
+### 7. *Swraqtar*
 
-#### a) **Список вопросов**
-- **usıl:** `GET`
-- **marshrut:** `/api/lessons/questions/`
-- **Kútilgen juwap:**
+#### a) *Siwraqtar spisogi*
+- *usıl:* `GET`
+- *marshrut:* `/api/lessons/questions/`
+- *Kútilgen juwap:*
   ```json
   [
       {
@@ -286,14 +288,14 @@
   ]
   ```
 
-#### b) **Создание вопроса**
-- **usıl:** `POST`
-- **marshrut:** `/api/lessons/questions/`
-- **bas betler:**
+#### b) *Swraq jaratiw*
+- *usıl:* `POST`
+- *marshrut:* `/api/lessons/questions/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
-- **Soraw denesi:**
+- *Soraw denesi:*
   ```json
   {
       "test": 1,
@@ -302,7 +304,7 @@
       "correct_answer": "B"
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "id": 2,
@@ -315,10 +317,10 @@
 
 ---
 
-### 8. **Отправка ответов**
-- **usıl:** `POST`
-- **marshrut:** `/api/lessons/submit-test/<test_id>/`
-- **bas betler:**
+### 8. *Jawaptardi jiberiw*
+- *usıl:* `POST`
+- *marshrut:* `/api/lessons/submit-test/<test_id>/`
+- *bas betler:*
   ```json
   Authorization: Bearer your_access_token
   ```
@@ -331,7 +333,7 @@
       }
   }
   ```
-- **Kútilgen juwap:**
+- *Kútilgen juwap:*
   ```json
   {
       "message": "Тест завершен!",
