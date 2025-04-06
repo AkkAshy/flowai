@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0uxu4_0r#d(fqfk3#06533c+1the$o97e3)607hh=gs(68y@l+
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['flowai-fi2m.onrender.com']
 
 
 REST_FRAMEWORK = {
